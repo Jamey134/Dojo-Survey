@@ -23,7 +23,9 @@ def results():
     session['userComment'] = request.form['comment']
     return redirect('/results')
 
-
+@app.route('/results/form')
+def goBack():
+    return redirect('/')
 
 
 
