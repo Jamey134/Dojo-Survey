@@ -13,42 +13,50 @@
             padding: 0 auto;
             margin: 0 auto;
         }
+
+        body {
+            display: flex;
+            align-items: center;
+            margin-top: 10%;
+        }
     </style>
 </head>
 
 <body>
-    <form>
+    <form action='/results/form' method='POST'>
+        <h1>Dojo Survey</h1>
         <div class="form-group">
             <label for="FormControlInput1">Name:</label>
-            <input type="text" class="form-control" id="FormControlInput1" placeholder="Full Name">
+            <input name='name' type="text" class="form-control form-control-lg" id="FormControlInput1"
+                placeholder="Full Name">
         </div>
         <div class="form-group">
             <label for="FormControlSelect1">Dojo Location:</label>
-            <select class="form-control" id="FormControlSelect1">
+            <select name='location' class="form-control form-control-lg" id="FormControlSelect1">
                 <option value="">---Select A Location---</option>
-                <option>Bellevue</option>
-                <option>Burbank</option>
-                <option>Chicago</option>
-                <option>Online</option>
-                <option>San Jose</option>
+                <option value="Bellevue">Bellevue</option>
+                <option value="Burbank">Burbank</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Online">Online</option>
+                <option value="San Jose">San Jose</option>
             </select>
         </div>
         <div class="form-group">
             <label for="FormControlSelect1">Favorite Language:</label>
-            <select class="form-control" id="FormControlSelect1">
-                <option value="">---Select A Language---</option>
-                <option>HTML</option>
-                <option>CSS</option>
-                <option>Python</option>
-                <option>JavaScript</option>
-                <option>Java</option>
-                <option>C#</option>
+            <select name='language' class="form-control form-control-lg" id="FormControlSelect1">
+                <option>---Select A Language---</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="C#">C#</option>
             </select>
         </div>
         <div class="form-group">
             <label for="FormControlTextarea1">Comment (optional)</label>
-            <textarea class="form-control" id="FormControlTextarea1" rows="6"></textarea>
-            <button type="button" class="btn btn-warning">Submit</button>
+            <textarea name='comment' class="form-control" id="FormControlTextarea1" rows="6"></textarea>
+            <button type="submit" class="btn btn-warning">Submit</button>
         </div>
     </form>
 
